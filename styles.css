@@ -1,0 +1,42 @@
+body{
+  border:1px solid gray;
+  width:40%;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px gray;
+}
+
+header{
+  background-color: #3275c8;
+  padding: 5%;
+  color: white;
+  font-size: 2em;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  margin: 3%;
+}
+
+.look-pretty{
+  margin: 2%;
+  border-radius: 5px;
+  border: 2px solid gray;
+  padding: 3%;
+}
+
+#user-comment{
+  padding: 5%;
+}
+
+
+footer{
+  background-color: #3275c0;
+}
+
+button{
+  padding: 2%;
+  background-color: #3275c0;
+  color: white;
+  border-radius: 5px;
+}
