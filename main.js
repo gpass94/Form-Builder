@@ -89,8 +89,25 @@ for (var i = 0; i < formData.length; i++) {
   let text;
   if (obj.options.length === 0) {
     text = '<input class="look-pretty" type="text' + obj.type + '" id="' + obj.id + '" placeholder="' + obj.label +'">'
+
+
   } else {
-     text = '<select class="select" type="select" id="size"><option value="EN" selected>English</option><option value="FR">French</option><option value="SP">Spanish</option><option value="CH">Chinese</option><option value="JP">Japanese</option></select>' 
-  }
+    let cell = document.createElement('select');
+    cell.classList.add('selector');
+    let selectorBegin = document.createElement('option');
+
+    selectorBegin.textContent = 'Select Language';
+
+    cell.appendChild(selectorBegin);
+
+      for (j = 0; j < obj.options.length; j++) {
+        let option = document.createElement('option');
+        option.label = obj.options[j].label;
+        option.value = obj.options[j].value;
+        cell.appendChild(option);
+      }
+
+      form.appendChild(cell)
+    }
   form.insertAdjacentHTML("beforeend", text);
 }
